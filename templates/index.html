@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Lego Mindstorms Controller</title>
+    </head>
+
+<body>
+  <button id="forward">
+    Forward
+  </button>
+  <button id="back">
+    Back
+  </button>
+    <button id="left">
+    Left
+  </button>
+    <button id="right">
+    Right
+  </button>
+  <button id="honk">
+    Honk
+  </button>
+</body>
+
+<script>
+  const upbtn = document.querySelector("#forward")
+  upbtn.addEventListener("click", function(){
+      fetch("/forward")
+  })
+  const downbtn = document.querySelector("#back")
+  downbtn.addEventListener("click", function(){
+      fetch("/back")
+  })
+  const leftbtn = document.querySelector("#left")
+  leftbtn.addEventListener("click", function(){
+      fetch("/left")
+  })
+  const rightbtn = document.querySelector("#right")
+  rightbtn.addEventListener("click", function(){
+      fetch("/right")
+  })
+  const honk = document.querySelector("#honk")
+  honk.addEventListener("click", function(){
+      fetch("/honk")
+  })
+</script>
+
+</html>
